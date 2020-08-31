@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+{% extends "bootstrap_ui/bootstrap3-skeleton.html" %}
+{% block body-content %}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    var h = new Date()
+	$(document).ready(function(){
+	    setInterval(function(){
+	        $('#hi').text(h)
+	    }, 2000);
+	});
+</script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First page</title>
+</head>
+<body>
+
+{% for i in the_list %}
+<h1>{{ i }}</h1>
+{% endfor %}
+    <h1>{{ content }}</h1>
+    <h2>{{ number }}</h2>
+<div id="hi"><h1></h1></div>
+</body>
+{% endblock %}
+</html>

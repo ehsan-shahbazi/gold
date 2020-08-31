@@ -1,0 +1,477 @@
+<!DOCTYPE HTML>
+{% load static %}
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="refresh" content="300" >
+	<title style="font-family: 'Amiri', serif;">محک</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="خرید و فروش سکه و طلا" />
+	<meta name="keywords" content="آبشده, قیمت سکه, طلا, آریاشهر, صادقیه, سکه امامی, نیم سکه, محک" />
+	<meta name="author" content="meshahbazi72@gmail.com" />
+
+
+	<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet" type='text/css'>
+	<script type="text/javascript" src="https://www.bullionvault.com/chart/bullionvaultchart.js" ></script>
+	<script type="text/javascript" >
+		var options = {
+			bullion: 'gold',
+			currency: 'USD',
+			timeframe: '20y',
+			chartType: 'line',
+			miniChartModeAxis : 'oz',
+			referrerID: 'MYUSERNAME',
+			containerDefinedSize: true,
+			miniChartMode: false,
+			displayLatestPriceLine: true,
+			switchBullion: true,
+			switchCurrency: true,
+			switchTimeframe: true,
+			switchChartType: true,
+			exportButton: true
+		};
+		var chartBV = new BullionVaultChart(options, 'embed');
+	</script>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'polls/css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'polls/css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'polls/css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'polls/css/magnific-popup.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'polls/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'polls/css/owl.theme.default.min.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'polls/images/icon.png' %}">
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'polls/js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'polls/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+
+	<body style="font-family: 'Amiri', serif;">
+	{% block body-content %}
+	<div class="gtco-loader"></div>
+	<div id="page">
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="gtco-logo">
+						<a href="/home">MahakCoin</a>
+						<a style="font-size: 20px;" href="tel://982144241243">02144241243</a>
+					</div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="/home">صفحه اصلی</a></li>
+						<li><a href="/home#gtco-services">درباره ما</a></li>
+						<li class="has-dropdown">
+							<a href="#">خدمات</a>
+							<ul class="dropdown">
+								<li><a href="/home#gtco-counter1">سکّه</a></li>
+								<li><a href="/home#gtco-features">تحلیل</a></li>
+							</ul>
+						</li>
+						<li class="has-dropdown">
+							<a href="/contact">تماس</a>
+						</li>
+						<li><a href="/news">اخبار</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" style="background-image:url({% static 'polls/images/img_bg_1.jpg' %}); width: 100%;  height: auto;">
+		<div class="overlay"></div>
+		<div class="gtco-container" style="font-family: 'Amiri', serif;">
+			<div class="row">
+				<div class="col-md-5 col-md-offset-0 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div id="gtco-counter1" class="gtco-bg gtco-cover gtco-counter" style="background-image:url({% static 'polls/images/img_bg_2.jpg' %});">
+	    <table class="table table-bordered table-dark">
+            <thead>
+                <tr>
+                    <th scope="col" style="color:rgb(256,256,256);text-align:center;">جدول قیمت‌ها</th>
+                    <th scope="col" style="color:rgb(256,0,0);text-align:center;">فروش</th>
+                    <th scope="col" style="color:rgb(0,256,0);text-align:center;">خرید</th>
+                </tr>
+            </thead>
+            <tbody>
+  	            {% for mat in stringed %}
+                    <tr>
+		                {% for da in mat %}
+                            <td style="color:rgb(256,256,256);">{{da}}</td>
+		                {% endfor %}
+                    </tr>
+  	            {% endfor %}
+            </tbody>
+        </table>
+	</div>
+
+	<div id="gtco-features">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-eye"></i>
+						</span>
+						<h3 style="font-family: 'Amiri', serif;">بررسی علمی بازار طلا</h3>
+						<p>ما دادن مشاوره دقیق و آماری را یکی از حقوق اساسی مشتریان خود می‌دانیم و هر گونه خرید و فروش بدون آگاهی برابر بین خریدار و فروشنده را غش در معامله می‌دانیم</p>
+						<p><a href="home#gtco-features-2" style="font-family: 'Amiri', serif;" class="btn btn-primary btn-outline">بیشتر بدانید</a></p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-command"></i>
+						</span>
+						<h3 style="font-family: 'Amiri', serif;">اعتبار ما</h3>
+						<p>ما اعضای سکّه محک با تجربه و اعتبار چندین ساله، همچنان رضایت و اعتماد مشتریان را مهمترین سرمایه خود میدانیم</p>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="feature-center animate-box" data-animate-effect="fadeIn">
+						<span class="icon">
+							<i class="icon-power"></i>
+						</span>
+						<h3 style="font-family: 'Amiri', serif;">بررسی علّت تغییرات</h3>
+						<p>یکی از خدمات اساسی ما در سکّه محک، بررسی اخبار داخلی و خارجی و تحلیل آماری تاثیر هریک از اخبار بر رفتار بازار طلا و سکّه و ارائه این اطلاعات به مشتریان است</p>
+						<p><a href="news" style="font-family: 'Amiri', serif;" class="btn btn-primary btn-outline">بیشتر بدانید</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-features-2">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+				    <h2 style="font-family: 'Amiri', serif;">ویدیوهای ما را ببینید</h2>
+					<p>تحلیل و آموزش و خبررسانی‌های عمومی سکّه محک از این طریق در اختیار مشتریان قرار گرفته‌است. بابت دریافت خبررسانی‌های خصوصی، در
+						<a href="home#gtco-subscribe"> خبرنامه </a>
+
+						ثبت‌نام کنید</p>
+				</div>
+			</div>
+
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="gtco-video gtco-video-sm gtco-bg" style="background-image: url({% static 'polls/images/video/v1.jpg' %}); ">
+						<a href="https://www.aparat.com/v/FshQT" class="popup-vimeo"><i class="icon-video"></i></a>
+						<div class="overlay"></div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+
+	<div id="gtco-counter2" class="gtco-bg gtco-cover gtco-counter" style="background-image:url({% static 'polls/images/img_bg_2.jpg' %});">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="display-t">
+					<div class="display-tc">
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-eye"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="774" data-speed="900" data-refresh-interval="50">1</span>
+								<span class="counter-label">میانگین تعداد بررسی اخبار روزانه</span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-anchor"></i>
+								</span>
+
+								<span class="counter js-counter" data-from="0" data-to="97" data-speed="900" data-refresh-interval="50">1</span>
+								<span class="counter-label">میانگین تعداد مشتری</span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-briefcase"></i>
+								</span>
+								<span class="counter js-counter" data-from="0" data-to="96" data-speed="900" data-refresh-interval="50">1</span>
+								<span class="counter-label">درصد رضایت مشتریان</span>
+							</div>
+						</div>
+						<div class="col-md-3 col-sm-6 animate-box">
+							<div class="feature-center">
+								<span class="icon">
+									<i class="icon-clock"></i>
+								</span>
+
+								<span class="counter js-counter" data-from="0" data-to="21023" data-speed="900" data-refresh-interval="50">1</span>
+								<span class="counter-label">تعداد اعضا خبرنامه</span>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-testimonial">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h1 style="font-family: 'Amiri', serif;">نظرات همکاران و مشتریان</h1>
+				</div>
+			</div>
+			<div class="row animate-box">
+
+
+				<div class="owl-carousel owl-carousel-fullwidth ">
+					<div class="item">
+						<div class="testimony-slide active text-center">
+							<span>M.E. Shahbazi via,<a href="https://www.instagram.com/m.e.shahbazi/?hl=en" class="twitter">instagram</a></span>
+							<blockquote>
+								<p>سکّه محک بی شک یکی از بهترین‌های صنعت خودش در زمینه دادن مشاوره صحیح به مشتریانش هست</p>
+							</blockquote>
+						</div>
+					</div>
+					<div class="item">
+						<div class="testimony-slide active text-center">
+							<span>M. Alizadeh via,<a href="https://www.instagram.com/m.e.shahbazi/?hl=en" class="twitter">instagram</a></span>
+							<blockquote>
+								<p>همه توقعی که آدم از یه طلا فروشی میتونه داشته باشه توی سکه محک برآورده میشه</p>
+							</blockquote>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="gtco-services">
+		<div class="gtco-container">
+
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h1 style="font-family: 'Amiri', serif;">پیشنهادی که ما می‌دهیم</h1>
+					<p>با بهترین قیمت معامله کنید. در کمترین زمان معامله کنید. با بیشترین آگاهی معامله کنید. در کمترین ریسک معامله کنید</p>
+				</div>
+			</div>
+
+			<div class="row animate-box">
+
+				<div class="gtco-tabs">
+					<ul class="gtco-tab-nav">
+						<li class="active"><a href="#" data-tab="1"><span class="icon visible-xs"><i class="icon-command"></i></span><span class="hidden-xs">قیمت گذاری</span></a></li>
+						<li><a href="#" data-tab="2"><span class="icon visible-xs"><i class="icon-bar-graph"></i></span><span class="hidden-xs">روند خرید و فروش</span></a></li>
+						<li><a href="#" data-tab="3"><span class="icon visible-xs"><i class="icon-bag"></i></span><span class="hidden-xs">مشاوره</span></a></li>
+						<li><a href="#" data-tab="4"><span class="icon visible-xs"><i class="icon-box"></i></span><span class="hidden-xs">اطمینان</span></a></li>
+					</ul>
+
+					<!-- Tabs -->
+					<div class="gtco-tab-content-wrap">
+
+						<div class="gtco-tab-content tab-content active" data-tab-content="1">
+							<div class="col-md-6">
+								<div class="gtco-video gtco-bg" style="background-image: url({% static 'polls/images/img_1.jpg' %}); ">
+									<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
+									<div class="overlay"></div>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h2 style="font-family: 'Amiri', serif;">قیمت گذاری</h2>
+								<p>قیمت گذاری به صورت لحظه‌ای با نرخ اتحادیه صورت می‌گیرد</p>
+
+								<p>در صورت تمایل با تماس استعلام گرفته می‌شود</p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">پله آهنی</h2>
+										<p>گاها قیمت اتحادیه به دلایلی برداشته شده و در این مواقع استعلام قیمت مستقیما از بازار صورت می‌گیرد</p>
+									</div>
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">سفارش</h2>
+										<p>به دلیل مناسبات قانونی در حال حاضر هیچگونه خرید و فروشی بدون حضور مشتری قابل انجام نیست</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="gtco-tab-content tab-content" data-tab-content="2">
+							<div class="col-md-6 col-md-push-6">
+								<div class="gtco-video gtco-bg" style="background-image: url({% static 'polls/images/img_1.jpg' %}); ">
+									<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
+									<div class="overlay"></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-md-pull-6">
+								<h2 style="font-family: 'Amiri', serif;">روند خرید و فروش</h2>
+								<p>تمام خرید‌ها و فروش‌ها با فاکتور انجام می‌شود و در سریعترین زمان ممکن به اجرا در می‌آید</p>
+
+								<p>به‌منظور تسریع هرچه تمام تر می‌توانید قبل از تشریف فرمایی تماس بگیرید</p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">آماده خدمت رسانی</h2>
+										<p>همه روزه در ساعات ۹ صبح تا ۱۴ و ۱۵ تا ۲۱</p>
+									</div>
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">آشنایی با شما</h2>
+										<p>آشنایی با شما موجب خرسندی و افتخار ما خواهد بود و میتواند زمینه گسترش خدمات را فراهم کند</p>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div class="gtco-tab-content tab-content" data-tab-content="3">
+							<div class="col-md-6 col-md-push-6">
+								<div class="gtco-video gtco-bg" style="background-image: url({% static 'polls/images/img_1.jpg' %}); ">
+									<a href="https://vimeo.com/channels/staffpicks/93951774" class="popup-vimeo"><i class="icon-video"></i></a>
+									<div class="overlay"></div>
+								</div>
+							</div>
+							<div class="col-md-6 col-md-pull-6">
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3 style="font-family: 'Amiri', serif;">تحلیل بازار</h3>
+										<p>تحلیل تکنیکال و فاندامنتال بازار یکی از خدمات ما به مشتریان خاص است</p>
+									</div>
+								</div>
+
+								<div class="feature-left animate-box" data-animate-effect="fadeInLeft">
+									<span class="icon">
+										<i class="icon-check"></i>
+									</span>
+									<div class="feature-copy">
+										<h3 style="font-family: 'Amiri', serif;">بررسی اخبار</h3>
+										<p>پیشنهادات ما به شما بر پایه و اساس آماری و نه برداشت شخصی بنا نهاده شده تا شما بتوانید بهترین انتخاب را داشته باشید</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="gtco-tab-content tab-content" data-tab-content="4">
+							<div class="col-md-6">
+								<div class="icon icon-xlg">
+									<i class="icon-box"></i>
+								</div>
+							</div>
+							<div class="col-md-6">
+								<h2 style="font-family: 'Amiri', serif;">کمترین ریسک</h2>
+								<p>تمامی سیستم‌های پرداختی و دریافتی و نگهداری با به روزترین سیستم‌های امنیتی تجهیز شده</p>
+
+								<p>تا شما بتوانید از امنیت اطلاعات و امنیت مالی خود اطمینان داشته باشید</p>
+
+								<div class="row">
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">درب ضد سرقت</h2>
+										<p>به منظور عدم امکان سرقت از شما در محل خرید</p>
+									</div>
+									<div class="col-md-6">
+										<h2 style="font-family: 'Amiri', serif;" class="uppercase">نگهبانی مسلحانه</h2>
+										<p>وجود دو نگهبان مسلح از طرف نیرو‌های ارتش همواره در محل</p>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div id="gtco-subscribe">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2 style="font-family: 'Amiri', serif;">دریافت خبر</h2>
+					<p>جزو اوّلین افرادی باشید که اخبار مهم بازار طلا را دریافت می‌کنند</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-12">
+					<form class="form-inline" action="/new_user/" method="post">
+						{% csrf_token %}
+    					{{ form }}
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input name='email' type="email" class="form-control" id="email" placeholder="ایمیل شما">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="name" class="sr-only">Name</label>
+								<input name='name' type="text" class="form-control" id="name" placeholder="نام شما">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<button  style="font-family: 'Amiri', serif;" type="submit" class="btn btn-default btn-block">ثبت‌نام</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'polls/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'polls/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'polls/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'polls/js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'polls/js/jquery.countTo.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'polls/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'polls/js/magnific-popup-options.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'polls/js/main.js' %}"></script>
+	</div>
+	{% endblock %}
+	</body>
+</html>
+

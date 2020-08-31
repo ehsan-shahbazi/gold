@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+{% load static %}
+
+<!--
+	Greatness by FreeHTML5.co
+	Twitter: http://twitter.com/fh5co
+	URL: http://FreeHTML5.co
+-->
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta http-equiv="refresh" content="10" >
+	<title>محک</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="خرید و فروش سکه و طلا" />
+	<meta name="keywords" content="آبشده, قیمت سکه, طلا, آریاشهر, صادقیه, سکه امامی, نیم سکه, محک" />
+	<meta name="author" content="meshahbazi72@gmail.com" />
+
+	
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+
+	<link href='https://fonts.googleapis.com/css?family=Raleway:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="{% static 'polls/css/animate.css' %}">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="{% static 'polls/css/icomoon.css' %}">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="{% static 'polls/css/bootstrap.css' %}">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="{% static 'polls/css/magnific-popup.css' %}">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="{% static 'polls/css/owl.carousel.min.css' %}">
+	<link rel="stylesheet" href="{% static 'polls/css/owl.theme.default.min.css' %}">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="{% static 'polls/css/style.css' %}">
+
+	<!-- Modernizr JS -->
+	<script src="{% static 'polls/js/modernizr-2.6.2.min.js' %}"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="{% static 'polls/js/respond.min.js' %}"></script>
+	<![endif]-->
+
+	</head>
+	<body>
+	{% block body-content %}
+	<div class="gtco-loader"></div>
+	<div id="page">
+	<nav class="gtco-nav" role="navigation">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-xs-2">
+					<div id="gtco-logo"><a href="#">MahakCoin</a></div>
+				</div>
+				<div class="col-xs-10 text-right menu-1">
+					<ul>
+						<li class="active"><a href="home">صفحه اصلی</a></li>
+						<li><a href="home#gtco-testimonial">درباره ما</a></li>
+						<li class="has-dropdown">
+							<a href="#">خدمات</a>
+							<ul class="dropdown">
+								<li><a href="home#gtco-services">سکّه</a></li>
+								<li><a href="home#gtco-features">تحلیل</a></li>
+							</ul>
+						</li>
+						<li class="has-dropdown">
+							<a href="contact">تماس</a>
+						</li>
+						<li><a href="news">اخبار</a></li>
+					</ul>
+				</div>
+			</div>
+
+		</div>
+	</nav>
+
+	<header id="gtco-header" class="gtco-cover gtco-cover-sm" role="banner" style="background-image:url({% static 'polls/images/img_1.jpg' %});">
+		<div class="overlay"></div>
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>در تماس باشید</h1>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<div class="gtco-section">
+		<div class="gtco-container">
+			<div class="row">
+				<div class="col-md-5 col-md-push-1 animate-box">
+
+					<div class="gtco-contact-info">
+						<h3>آدرس</h3>
+						<ul>
+							<li class="address">تهران بین فلکه اول و دوم صادقیه <br> پاساژ شبنم طبقه پایین سکه محک </li>
+							<li class="phone"><a href="tel://982144229892">021   44   22   98   92</a></li>
+							<li class="phone"><a href="tel://982144241243">021 44 24 12 43</a></li>
+							<li class="email"><a href="mailto:info@yoursite.com">info@mahakcoin.com</a></li>
+							<li class="url"><a href="https://mahakcoin.com">MahakCoin.com</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-6 animate-box">
+					<h3>ارسال پیام</h3>
+					<form action="#">
+						<div class="row form-group">
+							<div class="col-md-6">
+								<label for="fname">نام</label>
+								<input name='name' type="text" id="fname" class="form-control" placeholder="نام شما">
+							</div>
+							<div class="col-md-6">
+								<label for="lname">نام خانوادگی</label>
+								<input name='family' type="text" id="lname" class="form-control" placeholder="نام خانوادگی شما">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="message">پیام</label>
+								<textarea name="message" id="message" cols="30" rows="10" class="form-control" placeholder="لطفا پیام یا سوالتان را برای ما بنویسید"></textarea>
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="email">ایمیل</label>
+								<input name="mail" type="text" id="email" class="form-control" placeholder="ایمیل شما">
+							</div>
+						</div>
+
+						<div class="row form-group">
+							<div class="col-md-12">
+								<label for="subject">شماره تماس</label>
+								<input name=phone type="text" id="subject" class="form-control" placeholder="مثال ۰۹۱۲۱۱۱۱۱۱۱">
+							</div>
+						</div>
+
+						<div class="form-group">
+							<input type="submit" value="ارسال" class="btn btn-primary">
+						</div>
+
+					</form>		
+				</div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div id="gtco-subscribe">
+		<div class="gtco-container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
+					<h2>دریافت خبر</h2>
+					<p>جزو اوّلین افرادی باشید که اخبار مهم بازار طلا را دریافت می‌کنند</p>
+				</div>
+			</div>
+			<div class="row animate-box">
+				<div class="col-md-12">
+					<form class="form-inline" action="/new_user/" method="post">
+						{% csrf_token %}
+    					{{ form }}
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="email" class="sr-only">Email</label>
+								<input name='email' type="email" class="form-control" id="email" placeholder="ایمیل شما">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<div class="form-group">
+								<label for="name" class="sr-only">Name</label>
+								<input name='name' type="text" class="form-control" id="name" placeholder="نام شما">
+							</div>
+						</div>
+						<div class="col-md-4 col-sm-4">
+							<button type="submit" class="btn btn-default btn-block">ثبت‌نام</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<footer id="gtco-footer" role="contentinfo">
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	
+	<!-- jQuery -->
+	<script src="{% static 'polls/js/jquery.min.js' %}"></script>
+	<!-- jQuery Easing -->
+	<script src="{% static 'polls/js/jquery.easing.1.3.js' %}"></script>
+	<!-- Bootstrap -->
+	<script src="{% static 'polls/js/bootstrap.min.js' %}"></script>
+	<!-- Waypoints -->
+	<script src="{% static 'polls/js/jquery.waypoints.min.js' %}"></script>
+	<!-- Carousel -->
+	<script src="{% static 'polls/js/owl.carousel.min.js' %}"></script>
+	<!-- countTo -->
+	<script src="{% static 'polls/js/jquery.countTo.js' %}"></script>
+	<!-- Magnific Popup -->
+	<script src="{% static 'polls/js/jquery.magnific-popup.min.js' %}"></script>
+	<script src="{% static 'polls/js/magnific-popup-options.js' %}"></script>
+	<!-- Main -->
+	<script src="{% static 'polls/js/main.js' %}"></script>
+	{% endblock %}
+	</body>
+</html>
+
