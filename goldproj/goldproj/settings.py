@@ -25,7 +25,7 @@ SECRET_KEY = '(%0tht%2p+9dc0s#i-egjwf%_v_z89nyd4fj0v$z)vx#49rf2p'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["mahakcoin.com", 'www.mahakcoin.com', "127.0.0.1"]
+ALLOWED_HOSTS = ["mahakcoin.com", 'www.mahakcoin.com', "127.0.0.1", "185.110.189.178"]
 
 
 # Application definition
