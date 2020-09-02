@@ -10,5 +10,3 @@ urlpatterns = [
     path('do_your_job_man', views.tasks, name='ok'),
     path('new_user/', views.new_user, name='make_user')
 ]
-
-

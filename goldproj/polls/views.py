@@ -76,7 +76,6 @@ def tasks(request):
     return render(request, 'polls/index.html', context=context)
 
 
-
 def contact(request):
     context = {
         "materials": Material.objects.all()

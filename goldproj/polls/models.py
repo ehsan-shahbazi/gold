@@ -109,11 +109,13 @@ class Wrapper(models.Model):
             elif self.kind == 1:
                 url = self.the_url
                 gold_mat = 'Ab_gerami18'
-
+                print('hi')
                 html = py_request.urlopen(str(url))
 
                 soup = BeautifulSoup(html, 'html.parser')
-                gold_body = soup.find(id='ctl12_ctl16_ctl00_PriceList1_gvList')
+                print('hi')
+                gold_body = soup.find(id='ctl12_ctl17_ctl00_PriceList1_gvList')
+                print(gold_body)
                 texts = ['سکه امامی', 'سکه بهار آزادی', 'سکه نیم', 'سکه ربع',
                          'سکه یک گرمی', 'سکه امامي ( زير 86)', 'سکه نيم ( زير 86 )', 'سکه ربع ( زير 86 )',
                          '1 گرم طلا 18 عیار']
@@ -121,10 +123,11 @@ class Wrapper(models.Model):
                          'nim_ghadim', 'rob_ghadim', 'Ab_gerami18']
                 main_mat = Material.objects.filter(name=gold_mat)[0]
                 for index, text in enumerate(texts):
+                    print(text)
                     product = gold_body.find(text=text).findNext()
                     coming_text = product.getText().replace(',', '')
                     # print(str(coming_text), str(coming_text).isdecimal())
-
+                    print(coming_text)
                     if str(coming_text):
                         buy_price = int(int(product.getText().replace(',', '')) / 10)
                         sell_price = int(int(product.findNext().findNext().getText().replace(',', '')) / 10)
