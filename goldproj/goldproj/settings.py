@@ -27,7 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["mahakcoin.com", 'www.mahakcoin.com', "127.0.0.1", "185.110.189.178"]
 
-
 # Application definition
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
