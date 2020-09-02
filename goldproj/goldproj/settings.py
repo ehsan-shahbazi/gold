@@ -29,10 +29,8 @@ ALLOWED_HOSTS = ["mahakcoin.com", 'www.mahakcoin.com', "127.0.0.1", "185.110.189
 
 
 # Application definition
-
 INSTALLED_APPS = [
     'polls.apps.PollsConfig',
-    'bootstrap_ui',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
