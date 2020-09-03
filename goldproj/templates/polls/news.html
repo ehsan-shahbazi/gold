@@ -9,12 +9,15 @@
 	<head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>محک</title>
+	<meta http-equiv="refresh" content="100" >
+	<title style="font-family: 'Amiri', serif;">محک</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Free HTML5 Website Template by FreeHTML5.co" />
-	<meta name="keywords" content="free website templates, free html5, free template, free bootstrap, free website template, html5, css3, mobile first, responsive" />
-	<meta name="author" content="FreeHTML5.co" />
+	<meta name="description" content="خرید و فروش سکه و طلا" />
+	<meta name="keywords" content="آبشده, قیمت سکه, طلا, آریاشهر, صادقیه, سکه امامی, نیم سکه, محک" />
+	<meta name="author" content="meshahbazi72@gmail.com" />
 
+
+	<link href="https://fonts.googleapis.com/css2?family=Amiri&display=swap" rel="stylesheet" type='text/css'>
 	
 
   	<!-- Facebook and Twitter integration -->
@@ -55,7 +58,7 @@
 	<![endif]-->
 
 	</head>
-	<body>
+	<body style="font-family: 'Amiri', serif;">
 	{% block body-content %}
 <div class="gtco-loader"></div>
 	<div id="page">
@@ -94,7 +97,7 @@
 				<div class="col-md-2 col-md-offset-2 text-center">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h1>اخبار</h1>
+							<h1 style="font-family: 'Amiri', serif;">اخبار</h1>
 							
 						</div>
 					</div>
@@ -108,18 +111,18 @@
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>تازه‌ترین‌ها</h2>
+					<h2 style="font-family: 'Amiri', serif;">تازه‌ترین‌ها</h2>
 				</div>
 			</div>
 			<div class="row row-pb-md">
 				{% for new in first_news %}
 				<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 					<div class="gtco-staff">
-						<h2>{{ new.publisher_name }}</h2>
+						<h2 style="font-family: 'Amiri', serif;">{{ new.publisher_name }}</h2>
 						<strong class="role">{{ new.date_time }}</strong>
 						<p>{{ new.title }}</p>
 						<ul class="gtco-social-icons">
-							<li><a href={{ new.link }}><i class="icon-dribbble"><span>  لینک خبر  </span></i></a></li>
+							<li><a style="font-family: 'Amiri', serif;" href={{ new.link }}><i class="icon-dribbble"><span>  لینک خبر  </span></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -130,11 +133,11 @@
 			{% for new in three_news %}
 				<div class="col-md-4 animate-box" data-animate-effect="fadeIn">
 					<div class="gtco-staff">
-						<h3>{{ new.publisher_name }}</h3>
+						<h3 style="font-family: 'Amiri', serif;">{{ new.publisher_name }}</h3>
 						<strong class="role">{{ new.date_time }}</strong>
 						<p>{{ new.title }}</p>
 						<ul class="gtco-social-icons">
-							<li><a href={{ new.link }}><i class="icon-dribbble"><span>  لینک خبر  </span></i></a></li>
+							<li><a style="font-family: 'Amiri', serif;" href={{ new.link }}><i style="font-family: 'Amiri', serif;" class="icon-dribbble"><span>  لینک خبر  </span></i></a></li>
 						</ul>
 					</div>
 				</div>
@@ -150,7 +153,7 @@
 		<div class="gtco-container">
 			<div class="row animate-box">
 				<div class="col-md-8 col-md-offset-2 text-center gtco-heading">
-					<h2>دریافت خبر</h2>
+					<h2 style="font-family: 'Amiri', serif;">دریافت خبر</h2>
 					<p>جزو اوّلین افرادی باشید که اخبار مهم بازار طلا را دریافت می‌کنند</p>
 				</div>
 			</div>
@@ -172,7 +175,7 @@
 							</div>
 						</div>
 						<div class="col-md-4 col-sm-4">
-							<button type="submit" class="btn btn-default btn-block">ثبت‌نام</button>
+							<button type="submit" class="btn btn-default btn-block" style="font-family: 'Amiri', serif;">ثبت‌نام</button>
 						</div>
 					</form>
 				</div>
@@ -207,6 +210,7 @@
 	<!-- Main -->
 	<script src="{% static 'polls/js/main.js' %}"></script>
 	{% endblock %}
+	</div>
 	</body>
 
 </html>
